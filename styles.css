@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: lightgrey;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+/*The body font and Background color*/
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #212121;
+  margin: 0;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 60%, 0 50%;
+  }
+  100% {
+    background-position: 0 60%, 100% 50%;
+  }
+}
+
+/*Making the container display the cards next to each other*/
+
+.create-btn {
+  margin: 8px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px 64px;
+  justify-content: center;
+}
+
+/*Having the cards display*/
+
+.col {
+  background-color: rgba(255, 255, 255, 0.12);
+  margin: 8px;
+  color: white;
+}
+
+/*Making the cards hoverable*/
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: scale(1.0125);
+  box-shadow: 0 0 15px black;
+}
+
+/*Having the images max width of its image banner*/
+.card .banner-image {
+  width: 230px;
+  height: 200px;
+  margin: auto;
+}
+
+/*Setting the text*/
+.card .title-text {
+  font-size: 8px;
+  margin: 8px;
+  padding: 0px;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card p {
+  font-size: 15px;
+  padding: 0px;
+  margin: 8px 0 16px 0;
+}
