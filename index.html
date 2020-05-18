@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Profiles</title>
+    <meta name="viewport" content="width=device-width, initial-scale= 1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!--Creating the navbar-->
+
+    <div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#"><i class="fa fa-fw fa-feed"></i> News Feed</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> User</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> Admin</a>
+      <!--Creating User Button-->
+      <button
+        type="button"
+        class="btn btn-primary create-btn"
+        data-toggle="modal"
+        data-target="#create_user"
+      >
+        Create User
+      </button>
+      <!--End of Creating User Button-->
+    </div>
+
+    <!--The container for the layout of the cards-->
+    <div class="row">
+      <!--Card 1-->
+      <div class="col card" data-toggle="modal" data-target="#view_user1">
+        <img class="banner-image" alt="placeholder" src="images/user1.jpg" />
+        <section class="title-text">
+          <h1>Admin</h1>
+          <p>First Name: Jane</p>
+          <p>Last Name: Damon</p>
+          <p>Email: janedamon@company.com</p>
+          <p>Cell: 071 875 2002</p>
+          <p>Landline: 021 650 8001</p>
+        </section>
+      </div>
+
+      <!--Card 2-->
+      <div class="col card" data-toggle="modal" data-target="#view_user2">
+        <img class="banner-image" alt="placeholder" src="images/user2.jpg" />
+        <section class="title-text">
+          <h1>Legal</h1>
+          <p>First Name: Josh</p>
+          <p>Last Name: Green</p>
+          <p>Email: joshgreen@company.com</p>
+          <p>Cell: 064 909 2898</p>
+          <p>Landline: 021 750 2000</p>
+        </section>
+      </div>
+
+      <!--Card 3-->
+      <div class="col card" data-toggle="modal" data-target="#view_user3">
+        <img class="banner-image" alt="placeholder" src="images/user3.jpg" />
+        <section class="title-text">
+          <h1>Dev</h1>
+          <p>First Name: Sophie</p>
+          <p>Last Name: Lang</p>
+          <p>Email: sophielang@company.com</p>
+          <p>Cell: 061 999 2818</p>
+          <p>Landline: 021 670 3030</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <!--Card 4-->
+      <div class="col card" data-toggle="modal" data-target="#view_user4">
+        <img class="banner-image" alt="placeholder" src="images/user4.jpg" />
+        <section class="title-text">
+          <h1>Admin</h1>
+          <p>First Name: Jessica</p>
+          <p>Last Name: Wales</p>
+          <p>Email: jessicawales@company.com</p>
+          <p>Cell: 073 504 8080</p>
+          <p>Landline: 021 455 5190</p>
+        </section>
+      </div>
+
+      <!--Card 5-->
+      <div class="col card" data-toggle="modal" data-target="#view_user5">
+        <img class="banner-image" alt="placeholder" src="images/user5.jpg" />
+        <section class="title-text">
+          <h1>Legal</h1>
+          <p>First Name: Cassie</p>
+          <p>Last Name: Wyngaardt</p>
+          <p>Email: cassiewygaardt@company.com</p>
+          <p>Cell: 081 808 3121</p>
+          <p>Landline: 021 896 5004</p>
+        </section>
+      </div>
+
+      <!--Card 6-->
+
+      <div class="col card" data-toggle="modal" data-target="#view_user6">
+        <img class="banner-image" alt="placeholder" src="images/user6.jpg" />
+        <section class="title-text">
+          <h1>Dev</h1>
+          <p>First Name: Cody</p>
+          <p>Last Name: Evans</p>
+          <p>Email: codyevans@company.com</p>
+          <p>Cell: 078 403 7227</p>
+          <p>Landline: 021 674 2874</p>
+        </section>
+      </div>
+    </div>
+    <!--Modal for the Create User-->
+    <div class="modal" id="create_user">
+      <div class="modal-dialog modal-l">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-muted">
+            <h6 class="modal-title">Complete the form</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!--Form within the body of the modal-->
+          <div class="modal-body text-body">
+            <form action="action_page.php">
+              <!--For the picture-->
+              <div class="form-group">
+                <label for="image">Picture</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="image"
+                  name="image"
+                  placeholder="Upload User Picture"
+                  required
+                />
+              </div>
+              <!--End of picture-->
+              <!--First Name Field-->
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" class="form-control" required />
+              </div>
+              <!--End of First Name-->
+
+              <!--Last Name Field-->
+              <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" class="form-control" required />
+              </div>
+              <!--End of Last Name-->
+
+              <!--Email Field-->
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <!--End of Email-->
+
+              <!--Cellphone Field-->
+              <div class="form-group">
+                <label for="cellphone">Cellphone:</label>
+                <input
+                  type="tel"
+                  name="cellphone"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <!--End of Cellphone-->
+
+              <!--Landline Field-->
+              <div class="form-group">
+                <label for="Landline">Landline:</label>
+                <input
+                  type="tel"
+                  name="Landline"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <!--End of Landline-->
+
+              <!--Address Field-->
+              <div class="form-group">
+                <label for="address">Address:</label>
+                <input
+                  type="text"
+                  name="address"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <!--End of Address-->
+
+              <!--Next of Kin Section-->
+              <p>Next of Kin Information</p>
+
+              <!--Next of kin Name-->
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" class="form-control" required />
+              </div>
+              <!--End of Next of kin Name-->
+
+              <!--Next of kin relationship-->
+              <div class="form-group">
+                <label for="r.ship">Relationship:</label>
+                <input
+                  type="text"
+                  name="r.ship"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <!--End of Next of kin Relationship-->
+
+              <!--Next of kin Email-->
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <!--End of Next of kin Email-->
+
+              <!--Next of kin Cellphone-->
+              <div class="form-group">
+                <label for="cellphone">Cellphone:</label>
+                <input
+                  type="tel"
+                  name="cellphone"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <!--End of Next of kin Cellphone-->
+
+              <!--Creating Submit Button-->
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <!--End of submit button-->
+            </form>
+          </div>
+          <!--End of Modal body-->
+
+          <!--Modal Footer-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+          <!--End of Modal Footer-->
+        </div>
+      </div>
+    </div>
+    <!--End of Modal for Create User-->
+
+    <!--Modal 1-->
+    <div class="modal" id="view_user1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-muted">
+            <h6 class="modal-title">Additionnal Information</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <div class="modal-body text-body">
+            <p>Home Address: 102 Caledon Rd, Camps Bay 8001</p>
+            <p>Next of kin information</p>
+            <p>Name: Lily</p>
+            <p>Relationship: Daughter</p>
+            <p>Cell: 061 090 4202</p>
+            <p>Email: lilydamon@yahoo.com</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#delete_user1"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Modal 1-->
+
+    <!--Creating the confirmation message for delete user1-->
+    <div class="modal" id="delete_user1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-danger">
+            <h6 class="modal-title">Are you sure?</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!--Modal body-->
+          <div class="modal-body text-body">
+            <p>By deleting user you will not be able to recover details</p>
+          </div>
+
+          <!--Modal Footer-->
+          <div class="modal-footer text-danger">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Delete Modal user 1-->
+
+    <!--Modal 2-->
+    <div class="modal" id="view_user2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-muted">
+            <h6 class="modal-title">Additional Information</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <div class="modal-body text-body">
+            <p>Home Address: 20 Wales str, FishHoek 8600</p>
+            <p>Next of Kin Information</p>
+            <p>Name: Marlene</p>
+            <p>Relationship: Wife</p>
+            <p>Cell: 078 544 6336</p>
+            <p>Email: marleneGreen@outlook.com</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#delete_user2"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Modal 2-->
+
+    <!--Creating Delete Modal for User 2-->
+    <div class="modal" id="delete_user2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-danger">
+            <h6 class="modal-title">Are you sure</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!--Modal Body-->
+          <div class="modal-body text-body">
+            <p>By deleting suer you will not be able to recover details</p>
+          </div>
+          <!--Modal Footer-->
+          <div class="modal-footer text-danger">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Modal 3-->
+    <div class="modal" id="view_user3">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+
+          <div class="modal-header text-muted">
+            <h6 class="modal-title">Additional Information</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <div class="modal-body text-body">
+            <p>Home Address: 101 Long rd, Somerset West 4500</p>
+            <p>Next of Kin Information</p>
+            <p>Name: Byron</p>
+            <p>Relationship: Husband</p>
+            <p>Cell: 089 100 2545</p>
+            <p>Email: byronlang@gmail.com</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#delete_user3"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Modal 3-->
+    <!--Creating Delete Modal 3-->
+    <div class="modal" id="delete_user3">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-danger">
+            <h6 class="modal-title">Are you sure?</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!--Modal body-->
+          <div class="modal-body text-body">
+            <p>By deleting user you will not be able to recover details</p>
+          </div>
+          <!--Modal Footer-->
+          <div class="modal-footer text-danger">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Creating Delete Modal for User 3-->
+
+    <!--Modal 4-->
+    <div class="modal" id="view_user4">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+
+          <div class="modal-header text-muted">
+            <h5 class="modal-title">Additional Information</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <div class="modal-body text-body">
+            <p>Home Address: 145 Koodoo St, Kraaifontein 7409</p>
+            <p>Next of Kin Information</p>
+            <p>Name: Craig</p>
+            <p>Relationship: Husband</p>
+            <p>Cell: 079 504 6272</p>
+            <p>Email: craigwales@hotmail.com</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#delete_user4"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Modal 4-->
+    <!--Creating Delete Modal for user 4-->
+    <div class="modal" id="delete_user4">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-danger">
+            <h6 class="modal-title">Are you sure?</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!--Modal Body-->
+          <div class="modal-body text-body">
+            <p>By deleting user you will not be able to recover details</p>
+          </div>
+          <!--Modal Footer-->
+          <div class="modal-footer text-danger">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Delete Modal for user 4-->
+
+    <!--Modal 5-->
+    <div class="modal" id="view_user5">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+
+          <div class="modal-header text-muted">
+            <h6 class="modal-title">Additional Information</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <div class="modal-body text-body">
+            <p>Home Address: 44 Brick Field, Salt River 7900</p>
+            <p>Next of Kin Information</p>
+            <p>Name: Carol</p>
+            <p>Relationship: Mother</p>
+            <p>Cell: 084 411 2325</p>
+            <p>Email: carolwyngaardt@gmail.com</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#delete_user5"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Modal for User 5-->
+    <!--Creating Delete Modal for user 5-->
+    <div class="modal" id="delete_user5">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-danger">
+            <h6 class="modal-title">Are you sure?</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!--Modal body-->
+          <div class="modal-body text-body">
+            <p>By deleting user you will not be able to recover details</p>
+          </div>
+          <!--Modal Footer-->
+          <div class="modal-footer text-danger">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Delete Modal User 5-->
+
+    <!--Modal 6-->
+    <div class="modal" id="view_user6">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+
+          <div class="modal-header text-muted">
+            <h4 class="modal-title">Additional Information</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <div class="modal-body text-body">
+            <p>Home Address: 20 Statice Heights, Crawford 7764</p>
+            <p>Next of Kin Information</p>
+            <p>Name: David</p>
+            <p>Relationship: Partner</p>
+            <p>Cell: 081 446 5110</p>
+            <p>Email: davidjosh@outlook.com</p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#delete_user6"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Creating Delete Modal for User 6-->
+    <div class="modal" id="delete_user6">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!--Modal Header-->
+          <div class="modal-header text-danger">
+            <h6 class="modal-title">Are you sure?</h6>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!--Modal Body-->
+          <div class="modal-body text-body">
+            <p>By deleting user you will not be able to recover details</p>
+          </div>
+          <!--Modal Footer-->
+          <div class="modal-footer text-danger">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--End of Delete Modal User 6-->
+  </body>
+</html>
